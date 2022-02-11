@@ -1,0 +1,4 @@
+kurre_bot_env_temp/
+__pycache__
+.env
+service_account.json
