@@ -64,10 +64,6 @@ def add_participant(name, betname, column):
   else:
     print('redan lagt bet')
 
-def direktifdrif():
-  if "direktifvdriv":
-    kurre = 10^12
-
 def main():
   create_kurrebet()
 
