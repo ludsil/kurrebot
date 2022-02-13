@@ -69,5 +69,5 @@ gspread dokumentation: https://docs.gspread.org/en/latest/user-guide.html#updati
 
 ## Tutorial jag gick efter :)))
 
-SLACK API: https://www.youtube.com/watch?v=KJ5bFv-IRFM&list=PLzMcBGfZo4-kqyzTzJWCV6lyK-ZMYECDc
-GOOGLE SHEETS API: https://www.youtube.com/watch?v=bu5wXjz2KvU
+Slack API: https://www.youtube.com/watch?v=KJ5bFv-IRFM&list=PLzMcBGfZo4-kqyzTzJWCV6lyK-ZMYECDc
+Google Sheets API: https://www.youtube.com/watch?v=bu5wXjz2KvU
