@@ -1,11 +1,18 @@
 from hashlib import new
 from pkg_resources import invalid_marker
 import gspread
+from dotenv import load_dotenv
+import slack #slackclient
+import os
 import datetime
 
 service_account = gspread.service_account(filename="service_account.json")
 sheet = service_account.open("KOPIA_KURRE")
 ws = sheet.worksheet("Bets")
+
+slack_token = os.getenv("SLACK_TOKEN")
+client = slack.WebClient(token=slack_token)
+
 
 def create_kurrebet(msg):
   
@@ -63,6 +70,21 @@ def add_participant(name, betname, column):
     ws.update_cell(row, column, newval)
   else:
     print('redan lagt bet')
+
+def invalid_format(bet_text):
+  invalid = False
+  bet_text = bet_text.split('\n')
+  if len(bet_text[0].split()) < 2 or len(bet_text) != 2:
+    invalid = True
+    print('1')
+  try:
+    int(bet_text[0].split()[-1])
+  except:
+    print('2')
+    invalid = True
+  if invalid:
+    client.chat_postMessage(channel='#general', text="Fel format!")
+  return invalid
 
 def main():
   create_kurrebet()
