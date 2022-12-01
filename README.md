@@ -15,6 +15,8 @@
                                                                                                     
 # Beskrivning
 
+ENG: Small slackbot managing "bets" during the reception of new students at KTH
+
 Bot som fixar bet. Idén är att användaren som vill skapa ett kurrebet skriver ett sådant på formatet:
 
 ```
